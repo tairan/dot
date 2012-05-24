@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ ! -f `which curl` ]; then
+	echo "You must install curl before install rvm"
+	exit 2
+fi
+
+curl -L get.rvm.io | bash -s stable
