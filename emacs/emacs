@@ -10,6 +10,8 @@
 
 (line-number-mode t)   		;; show line number
 (column-number-mode t)		;; show column number
+
+(cua-mode 1)	    		;; Cut Copy Paste Unto have X C V Z kyes
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
