@@ -1,10 +1,40 @@
+" coding system
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set encoding=utf-8
+""set termencoding=cp936
+""language messages zh_CN.UTF-8
+
+" general settings
+set nocompatible
+set backspace=indent,eol,start
+set ambiwidth=double
+
+set sw=4
+set ts=4
+set smarttab
+
+set lbr
+set fo+=mB
+
+set sm
+
+" plugin
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
 
 syntax enable
+filetype plugin indent on
 
-if has('gui_running')
+if (has('gui_running'))
     set background=light
 else
     set background=dark
 endif
 
 colorscheme solarized
+
+" for windows
+if (has('gui_win32'))
+	au GUIEnter * simalt ~x
+	set guifont=Consolas:h13:cANSI
+endif
