@@ -1,7 +1,8 @@
 " coding system
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set encoding=utf-8
-""set termencoding=cp936
+set termencoding=utf-8
+set fileencoding=utf-8
 ""language messages zh_CN.UTF-8
 
 " general settings
@@ -9,14 +10,16 @@ set nocompatible
 set backspace=indent,eol,start
 set ambiwidth=double
 
-set sw=4
-set ts=4
+set autoindent
+set shiftwidth=4
+set tabstop=4
 set smarttab
 
 set lbr
 set fo+=mB
 
 set sm
+set nu
 
 " plugin
 runtime bundle/vim-pathogen/autoload/pathogen.vim
@@ -32,6 +35,8 @@ else
 endif
 
 colorscheme solarized
+
+let g:pydiction_location='~/.vim/bundle/Pydiction/complete-dict'
 
 " for windows
 if (has('gui_win32'))
