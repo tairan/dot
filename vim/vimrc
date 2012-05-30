@@ -3,23 +3,32 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
-""language messages zh_CN.UTF-8
+set ambiwidth=double
 
 " general settings
 set nocompatible
 set backspace=indent,eol,start
-set ambiwidth=double
+set list
+set autochdir
 
 set autoindent
 set shiftwidth=4
 set tabstop=4
 set smarttab
+set expandtab
 
 set lbr
-set fo+=mB
+set formatoptions+=mM
 
 set sm
-set nu
+set number
+set mouse=a
+
+set history=128
+set nobackup
+set nowritebackup
+set backupdir=/tmp
+set directory=/tmp
 
 " plugin
 runtime bundle/vim-pathogen/autoload/pathogen.vim
@@ -36,10 +45,18 @@ endif
 
 colorscheme solarized
 
+" For Python
 let g:pydiction_location='~/.vim/bundle/Pydiction/complete-dict'
 
-" for windows
+set listchars=tab:>-,trail:.,extends:>,eol:$
+autocmd BufRead *.py set smartindent expandtab
+autocmd BufWritePre *.py :%s/\s\+$//e
+
+" For Javascript
+autocmd BufRead *.js set smartindent expandtab!
+
+" For Windows
 if (has('gui_win32'))
-	au GUIEnter * simalt ~x
-	set guifont=Consolas:h13:cANSI
+    au GUIEnter * simalt ~x
+    set guifont=Consolas:h13:cANSI
 endif
