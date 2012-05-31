@@ -3,3 +3,7 @@
 	email = tairan.wang@gmail.com
 [core]
 	editor = vim
+[color]
+	diff = auto
+	branch = auto
+	status = auto
