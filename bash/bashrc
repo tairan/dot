@@ -4,5 +4,9 @@ if [ -f ~/.rvm/scripts/rvm ]; then
 	source ~/.rvm/scripts/rvm
 fi
 
+alias ls='ls --color=auto'
 alias ll='ls -lsh'
 alias la='ls -a'
+
+alias du='du -h'
+alias df='df -h'
