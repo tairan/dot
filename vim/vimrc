@@ -56,7 +56,12 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufRead *.js set smartindent expandtab!
 
 " For Windows
-if (has('gui_win32'))
+if has('gui_win32')
     au GUIEnter * simalt ~x
     set guifont=Consolas:h13:cANSI
+endif
+
+if has("unix")
+    let $EX_DEV='~/.vim'
+    let g:ex_toolkit_path = '~/.vim/toolkit'
 endif
