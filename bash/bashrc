@@ -4,5 +4,6 @@ if [ -f ~/.rvm/scripts/rvm ]; then
 	source ~/.rvm/scripts/rvm
 fi
 
+alias ls='ls -G'
 alias ll='ls -lsh'
 alias la='ls -a'
