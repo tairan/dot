@@ -23,4 +23,4 @@ install-vim:
 	ln -s `pwd`/vim ~/.vim
 
 install-hosts:
-	cat `pwd`/etc/google-hosts >> /etc/hosts
+	cat `pwd`/etc/hosts >> /etc/hosts
