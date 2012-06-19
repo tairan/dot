@@ -4,6 +4,10 @@ install-bash:
 	rm -f ~/.bashrc
 	ln -s `pwd`/bash/bashrc ~/.bashrc
 
+install-zsh:
+	rm -f ~/.zshrc
+	ln -s `pwd`/zsh/zshrc ~/.zshrc
+
 install-git:
 	rm -f ~/.gitconfig
 	ln -s `pwd`/git/gitconfig ~/.gitconfig
