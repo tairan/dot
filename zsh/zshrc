@@ -2,9 +2,11 @@
 # fork from http://lcan.info/2011/01/myzshrc/
 #
 
+#rvm {{{
 if [ -f ~/.rvm/scripts/rvm ]; then
     source ~/.rvm/scripts/rvm
 fi
+#}}}
 
 #color{{{
 autoload colors
@@ -20,7 +22,8 @@ FINISH="%{$terminfo[sgr0]%}"
 
 #命令提示符
 RPROMPT=$(echo "$RED%D %T$FINISH")
-PROMPT=$(echo "$CYAN%n@$YELLOW%M:$GREEN%/$_YELLOW>$FINISH ")
+PROMPT=$(echo "$CYAN%n:$GREEN%/$_YELLOW>$FINISH ")
+#PROMPT=$(echo "$CYAN%n@$YELLOW%M:$GREEN%/$_YELLOW>$FINISH ")
 
 #PROMPT=$(echo "$BLUE%M$GREEN%/
 #$CYAN%n@$BLUE%M:$GREEN%/$_YELLOW>>>$FINISH ")
@@ -93,7 +96,6 @@ function hist { convhistory $HISTFILE }
 
 #全部历史纪录 top50
 function top50 { allhistory | awk -F':[ 0-9]*:[0-9]*;' '{ $1="" ; print }' | sed 's/ /\n/g' | sed '/^$/d' | sort | uniq -c | sort -nr | head -n 50 }
-
 #}}}
 
 #杂项 {{{
@@ -246,7 +248,9 @@ alias pacman='sudo pacman-color'
 alias p='sudo pacman-color'
 alias y='yaourt'
 alias h='htop'
-alias vim='sudo vim'
+alias df='df -h'
+alias du='du -h'
+#alias vim='sudo vim'
 
 #[Esc][h] man 当前命令时，显示简短说明
 alias run-help >&/dev/null && unalias run-help
@@ -295,7 +299,6 @@ bindkey "^[[11~" arith-eval-echo
 
 ####{{{
 function timeconv { date -d @$1 +"%Y-%m-%d %T" }
-
 # }}}
 
 zmodload zsh/mathfunc
