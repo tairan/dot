@@ -17,3 +17,5 @@ alias la='ls -a'
 
 alias du='du -h'
 alias df='df -h'
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
