@@ -11,7 +11,7 @@
 (line-number-mode t)   		;; show line number
 (column-number-mode t)		;; show column number
 
-(cua-mode 1)	    		;; Cut Copy Paste Unto have X C V Z kyes
+;;(cua-mode 1)	    		;; Cut Copy Paste Unto have X C V Z kyes
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -36,6 +36,15 @@
 		 (color-theme-initialize)
 		 (color-theme-gnome2)))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; for ibus
+(add-to-list 'load-path "~/.emacs.d/ibus-el")
+(require 'ibus)
+(add-hook 'after-init-hook 'ibus-mode-on)
+
+(setq ibus-cursor-color '("red" "blue" "limegreen"))
+
+(global-set-key [(?\C-;)] 'ibus-toggle)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
