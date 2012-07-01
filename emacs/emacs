@@ -49,6 +49,15 @@
 ;; for django
 (add-to-list 'load-path "~/.emacs.d/plugin/pony-mode/src")
 (require 'pony-mode)
+
+;; for Go lang
+(add-to-list 'load-path "~/.emacs.d/lang/go")
+(require 'go-mode-load)
+
+;; yasnippet
+(add-to-list 'load-path "~/.emacs.d/plugin/yasnippet")
+(require 'yasnippet)
+(yas/global-mode 1)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (custom-set-variables
   ;; custom-set-variables was added by Custom.

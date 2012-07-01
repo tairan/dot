@@ -10,3 +10,6 @@
 [submodule "emacs/emacs.d/plugin/pony-mode"]
 	path = emacs/emacs.d/plugin/pony-mode
 	url = git://github.com/davidmiller/pony-mode.git
+[submodule "emacs/emacs.d/plugin/yasnippet"]
+	path = emacs/emacs.d/plugin/yasnippet
+	url = git://github.com/capitaomorte/yasnippet.git
