@@ -27,9 +27,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; for theme
+;; Themes
 (add-to-list 'load-path "~/.emacs.d/colors/color-theme")
-
 (require 'color-theme)
 (eval-after-load "color-theme"
 		 '(progn
@@ -37,27 +36,40 @@
 		 (color-theme-gnome2)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; for ibus
+;; iBus
 (add-to-list 'load-path "~/.emacs.d/plugin/ibus-el")
 (require 'ibus)
 (add-hook 'after-init-hook 'ibus-mode-on)
-
 (setq ibus-cursor-color '("red" "blue" "limegreen"))
-
 (global-set-key [(?\C-;)] 'ibus-toggle)
 
-;; for django
-(add-to-list 'load-path "~/.emacs.d/plugin/pony-mode/src")
-(require 'pony-mode)
+;; Django
+;(add-to-list 'load-path "~/.emacs.d/plugin/pony-mode/src")
+;(require 'pony-mode)
 
-;; for Go lang
+;; golang.org
 (add-to-list 'load-path "~/.emacs.d/lang/go")
 (require 'go-mode-load)
+
+;; Markdown
+(add-to-list 'load-path "~/.emacs.d/syntax/markdown-mode")
+(require 'markdown-mode)
+(autoload 'markdown-mode "markdown-model.el"
+	  "Major mode for editiing Markdown files" t)
+(setq auto-mode-alist
+      (cons '("\\.markdown" . markdown-mode) auto-mode-alist))
+(setq auto-mode-alist
+      (cons '("\\.md" . markdown-mode) auto-mode-alist))
 
 ;; yasnippet
 (add-to-list 'load-path "~/.emacs.d/plugin/yasnippet")
 (require 'yasnippet)
 (yas/global-mode 1)
+
+;; coffeescript
+(add-to-list 'load-path "~/.emacs.d/lang/coffee-mode")
+(require 'coffee-mode)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
