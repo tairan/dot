@@ -19,3 +19,6 @@
 [submodule "emacs/emacs.d/lang/coffee-mode"]
 	path = emacs/emacs.d/lang/coffee-mode
 	url = git://github.com/defunkt/coffee-mode.git
+[submodule "emacs/emacs.d/colors/theme-solarized"]
+	path = emacs/emacs.d/colors/theme-solarized
+	url = git://github.com/sellout/emacs-color-theme-solarized.git
