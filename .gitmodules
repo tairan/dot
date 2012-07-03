@@ -22,3 +22,6 @@
 [submodule "emacs/emacs.d/colors/theme-solarized"]
 	path = emacs/emacs.d/colors/theme-solarized
 	url = git://github.com/sellout/emacs-color-theme-solarized.git
+[submodule "emacs/emacs.d/syntax/yaml-mode"]
+	path = emacs/emacs.d/syntax/yaml-mode
+	url = git://github.com/yoshiki/yaml-mode.git
