@@ -22,7 +22,7 @@ install-rvm:
 	bash `pwd`/ruby/install-rvm
 
 install-vim:
-	rm -rf ~/.vim ~/vimrc
+	rm -rf ~/.vim ~/.vimrc
 	ln -s `pwd`/vim/vimrc ~/.vimrc
 	ln -s `pwd`/vim ~/.vim
 
