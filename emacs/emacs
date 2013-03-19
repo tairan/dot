@@ -77,6 +77,10 @@
 ;; puppet-syntax-emacs
 (add-to-list 'load-path "~/.emacs.d/syntax/puppet-syntax-emacs")
 (require 'puppet-mode)
+(autoload 'puppet-mode "puppet-mode.el"
+	"puppet mode for editing puppet language files" t)
+(setq auto-mode-alist
+	(cons '("\\.pp" . puppet-mode) auto-mode-alist))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
