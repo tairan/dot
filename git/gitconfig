@@ -1,11 +1,13 @@
 [user]
 	name = Tairan Wang
 	email = tairan.wang@gmail.com
-[core]
-	editor = vim
 [color]
+	ui = always
 	diff = auto
 	branch = auto
 	status = auto
+	interactive = auto
+[merge]
+	ff = false
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
