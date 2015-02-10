@@ -28,6 +28,3 @@
 [submodule "emacs/emacs.d/syntax/puppet-syntax-emacs"]
 	path = emacs/emacs.d/syntax/puppet-syntax-emacs
 	url = git://github.com/puppetlabs/puppet-syntax-emacs.git
-[submodule "emacs/emacs.d/syntax/clojure-mode"]
-	path = emacs/emacs.d/syntax/clojure-mode
-	url = https://github.com/jochu/clojure-mode.git
